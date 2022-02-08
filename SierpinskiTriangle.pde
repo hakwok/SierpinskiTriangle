@@ -1,16 +1,18 @@
+int myColor = 255;
 public void setup()
 {
   size(1000, 1000);
+}
+public void mousePressed()
+{
+  myColor = color((int)(Math.random()*256+100), (int)(Math.random()*256+100), (int)(Math.random()*256+100));
 }
 public void draw()
 {
   background(0);
   noStroke();
+  fill(myColor);
   sierpinski(0, 1000, 1000);
-}
-public void mouseDragged()//optional
-{
-  
 }
 public void sierpinski(int x, int y, int len) 
 {
